@@ -15,5 +15,5 @@ streamlit run dashboard.py
 ## Dashboard
 Dashboard ini menampilkan bebrapa insight dari Brazilian E-Commerce dataset.
 
-Dashboard Link: 
+Dashboard Link: (https://dashboard-e-commerce-public-dataset-by-aldaellsaf.streamlit.app/)
 # E-Commerce-Public-Dataset
