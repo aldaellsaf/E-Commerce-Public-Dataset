@@ -92,6 +92,8 @@ with tab1:
     pengiriman = customer_seller.groupby(["seller_city", "customer_city"])["hari_pengiriman"].max()
     pengiriman = pengiriman.sort_values(ascending=False).head(5).reset_index()
     pengiriman
+    
+    st.write("Menampilkan tabel yang berisi lima data kota yang memiliki waktu pengiriman paket terlama, sehingga diperoleh kota tujuan dengan waktu pengiriman terlama adalah Kota Rio de Janeiro dengan lama pengiriman 205 hari")
 
     st.subheader("Conclution")
     st.write("Dengan ditampilkannya tabel yang berisi dengan tiga kolom yaitu kolom kota penjual, kolom kota pelanggan, dan kolom hari pengiriman. Ditampilkan lima data dengan waktu pengiriman yang bervariasi antara 188 hari hingga 205 hari. Sehingga kota tujuan dalam pengiriman paket yang memiliki waktu pengiriman terlama adalah Kota Rio de Janeiro dengan lama pengiriman yaitu 205 hari.")
@@ -116,6 +118,8 @@ with tab2:
     max_price = pendapatan["price"].max()
     st.write("Total pendapatan tertinggi sebesar:", max_price)
 
+    st.write("Menampilkan grafik batang lima kategori produk dengan pendapatan tertinggi, sehingga dapat diketahui bahwa kategori produk health_beauty yang menghasilkan pendapatan tertinggi yaitu sebesar 1.258.681,34 USD")
+
     st.subheader("Conclution")
     st.write("Grafik batang yang ditampilkan berisi tentang membandingkan pendapatan total dalam USD dari lima kategori produk yang berbeda yaitu kategori health_beauty, watches_gifts, bed_bath_table, sports_leisure, dan computers_accessories. Dari grafik batang tersebut didapatkan bahwa kategori produk health_beauty memiliki pendapatan tertinggi dari semua kategori yang ditampilkan dengan total pendapatan sebesar 1.258.681,34 USD.")
  
@@ -134,6 +138,8 @@ with tab3:
     plt.title("Kota yang Menghasilkan Pendapatan Tertinggi")
     st.pyplot(plt)
 
+    st.write("Menampilkan grafik batang dengan lima kota yang menghasilkan pendapatan tertinggi, sehingga dapat diketahui bahwa kota yang menghasilkan pendapatan tertinggi yaitu Kota Sao Paulo")
+ 
     st.subheader("Conclution")
     st.write("Grafik batang yang ditampilkan berisi tentang perbandingan pendapatan antara beberapa kota yang ada di Brasil. Terdapat lima kota yang ditampilkan dalam grafik tersebut yaitu Kota Sao Paulo, Kota Rio de Janeiro, Kota Belo Horizonte, Kota Brasilia, dan Kota Curitiba. Dari visualisasi grafik batang tersebut diperoleh bahwa Kota Sao Paulo menjadi kota yang menghasilkan pendapatan tertinggi.")
 
@@ -195,6 +201,13 @@ with tab4:
     plt.title("Histogram dari Monetary")
     st.pyplot(plt)
 
+    st.write("Berdasarkan visualisasi grafik batang yang ditampilkan, pengelompokkan pelanggan berdasarkan parameter RFM(Recency, Frequency, Monetary) didapatkan bahwa: ")
+    list = ["Histogram recency menunjukkan bahwa sebagian besar pelanggan memiliki nilai recency yang rendah.",
+            "Histogram frequency menunjukkan bahwa hampir semua pelanggan memiliki frekuensi pembelian yang sangat rendah.",
+            "Histogram monetary menunjukkan bahwa sebagian besar pelanggan memiliki nilai monetary yang rendah."]
+    md = "\n".join([f"{i+1}. {x}" for i, x in enumerate(list)])
+    st.markdown(md)
+ 
     st.subheader("Conclution")
     st.write("Berdasarkan visualisasi grafik batang yang ditampilkan, pengelompokkan pelanggan berdasarkan parameter RFM(Recency, Frequency, Monetary) didapatkan bahwa:")
     list = ["Histogram recency menunjukkan bahwa sebagian besar pelanggan memiliki nilai recency yang rendah, artinya pelanggan sudah lama tidak berbelanja.", 
